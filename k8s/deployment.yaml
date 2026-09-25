@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: devops-flask-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: devops-flask
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: devops-flask-container
-          image: ghcr.io/vikas-202/containerized-flask-application:latest
-          imagePullPolicy: Always
+          image: ghcr.io/vikas-202/containerized-flask-application:3eeca4894edeac736e91ed6e5729f405d2083cf0
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
