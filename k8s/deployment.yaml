@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: devops-flask-container
-          image: devops-flask-app:v1
-          imagePullPolicy: IfNotPresent
+          image: ghcr.io/vikas-202/containerized-flask-application:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
